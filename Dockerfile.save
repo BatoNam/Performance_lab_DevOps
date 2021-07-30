@@ -1,0 +1,8 @@
+FROM ubuntu:latest
+
+COPY "$(pwd)" /tmp
+
+RUN docker run -ti -v "$(pwd)":/tmp ubuntu:latest /bin/bash
+RUN cd/tmp | touch change_me.txt | exit
+RUN docker run -ti -v "$(pwd)":/tmp ubuntu:latest /bin/bash
+docker run -ti -v "$(pwd)":/tmp ubuntu:latest /bin/bash
